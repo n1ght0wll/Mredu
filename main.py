@@ -12,10 +12,7 @@ import os
 import sys
 
 from config import MODEL, API_KEY, MAX_TOKENS, TEMPERATURE
-<<<<<<< HEAD
 
-=======
->>>>>>> 9678568bcb25783573f2be81b79aac8119a45fc0
 WELCOME = """
 ============================================================
   MrEdu v1.0
