@@ -14,7 +14,7 @@ API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # Maximum tokens MrEdu can generate per response
 # 1 token ≈ 0.75 words. 1024 handles detailed explanations well.
-MAX_TOKENS = 1024
+MAX_TOKENS = 768
 
 # Controls randomness. 0.0 = deterministic, 1.0 = creative.
 # 0.7 is standard for conversational agents.
