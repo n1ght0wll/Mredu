@@ -2,16 +2,6 @@
 main.py — MrEdu v1.0 (Gemini + Streaming)
 The orchestration layer. This is the brain of the agent.
 
-STREAMING EXPLAINED:
-Without streaming: wait for full response → print everything at once
-With streaming:    print each chunk as it arrives → feels instant
-
-The API sends the response in small chunks (tokens).
-We print each chunk immediately as it arrives using
-client.models.generate_content_stream() instead of
-client.chats.create() — streaming requires a slightly
-different call pattern but the concept is identical.
-
 We manually maintain the messages array so the model
 has full conversation history on every call.
 """
