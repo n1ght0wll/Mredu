@@ -12,7 +12,21 @@ import os
 import sys
 
 from config import MODEL, API_KEY, MAX_TOKENS, TEMPERATURE
-
+WELCOME = """
+============================================================
+  MrEdu v1.0
+  Built on Google Gemini API (gemini-flash-latest)
+  Purpose: Teach you how I was built by talking to me
+------------------------------------------------------------
+  Questions to start with:
+  - What are you built on?
+  - What is a system prompt?
+  - How does your memory work?
+  - What is a context window?
+  - What is the difference between you and an agent?
+  Type 'exit' or 'quit' to end the session
+============================================================
+"""
 
 # ──────────────────────────────────────────────────────────
 # STEP 1: Load the system prompt
@@ -96,11 +110,8 @@ def run_conversation(client, system_prompt):
     # Same concept as before — full history every call.
     messages = []
 
-    print("\n" + "="*60)
-    print("  MrEdu v1.0 — Learn how I was built by talking to me")
-    print("  Type 'exit' or 'quit' to end the session")
-    print("="*60 + "\n")
-
+    print(WELCOME)
+    
     while True:
 
         try:
